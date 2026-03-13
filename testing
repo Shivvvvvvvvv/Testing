@@ -1,0 +1,412 @@
+Create a lambda function with below requirement
+
+1. Sample Request 
+
+Request 1
+{
+    "Data": {
+        "FetchCustomerDataFlag": "N",
+        "CustomerId": "11229668"
+    }
+}
+
+Request 2
+{
+    "Data": {
+        "FetchCustomerDataFlag": "Y",
+        "CustomerId": "11229668"
+    }
+}
+
+Response When "FetchCustomerDataFlag": "N",
+{
+    "Data": {
+        "FullName": "kfswmjkkunwk  uuoh ser hhow/b",
+        "CustomerId": "11229668",
+        "MobileNumber": "971557245090",
+        "Email": "x@xxx.com",
+        "ClaClientName": "kfswmjkkunwk  uuoh ser hhow/b",
+        "ClPreventTrading": "Y",
+        "Nationality": "IN",
+        "EmiratesId": "78419xxxx62984"
+    }
+}
+
+Response When "FetchCustomerDataFlag": "Y",
+
+{
+    "Data": {
+        "KYCData": {
+            "FullName": "kfswmjkkunwk  uuoh ser hhow/b",
+            "Gender": "male",
+            "Dob": "2050-01-01",
+            "PlaceOfBirth": "IN",
+            "Nationality": "IN",
+            "IdType": "ID",
+            "IdNumber": "V5136229",
+            "IdExpiry": "2033-01-18",
+            "AddressLine1": "zek2 wo i y syzfe ,krkm,khokf",
+            "AddressLine2": "zek2 wo i y syzfe ,krkm,khokf",
+            "City": "1",
+            "State": "",
+            "Country": "1",
+            "PostalCode": "",
+            "Email": "x@xxx.com",
+            "Mobile": "971557245090",
+            "Landline": "",
+            "EmploymentStatus": "",
+            "ClaClientName": "kfswmjkkunwk  uuoh ser hhow/b",
+            "ClPreventTrading": "Y",
+            "EmployerDetails": {
+                "EmployerName": "",
+                "EmployerAddress": ""
+            },
+            "PoliticalExposure": {
+                "IsPep": false,
+                "PositionHeld": "",
+                "RelatedToPep": {
+                    "IsRelated": false,
+                    "PepName": "",
+                    "Relationship": ""
+                }
+            },
+            "FatcaCrs": {
+                "USPassport": false,
+                "TaxResidence": [
+                    "89",
+                    "89",
+                    "208",
+                    "211"
+                ],
+                "TINDetails": "bmjpm6189a",
+                "NoTINReason": "0",
+                "SpentMoreThan90Days": false,
+                "UndocumentedAccount": false
+            },
+            "InternalAssessments": {
+                "CustomerRiskScore": "Low",
+                "Classification": "00000"
+            },
+            "ScreeningOutcomes": {
+                "Details": ""
+            },
+            "EnhancedDueDiligence": {
+                "IsEddCarriedOut": false,
+                "Details": ""
+            },
+            "TaxIdNumber": {
+                "W9": "",
+                "SSNOrEIN": ""
+            }
+        }
+    }
+}
+
+Logic When "FetchCustomerDataFlag": "N",
+
+
+1. It should call below two api and map the response with actual
+
+POST :https://devmaglan.adcbmis.local:8443/v1/customer/details
+Request
+{
+    "Data": {
+        "CustomerId": "10513456"
+    }
+}
+Response
+
+{
+    "Data": {
+        "Customer": {
+            "CustomerPersonalDetails": {
+                "ContactDetails": {
+                    "Country": "UNITED ARAB EMIRATES",
+                    "AddressZip": "50066",
+                    "City": "DUBAI",
+                    "Fax": "FAX",
+                    "AddressLine2": "ADDRESS3",
+                    "AddressLine1": "ADDRESS2",
+                    "State": "DUBAI",
+                    "MobileNumber": "1234567890",
+                    "PhoneNumber": "HOME_TEL_NO",
+                    "AddressLine3": "ADDRESS4",
+                    "EmailId": "Email@adcb.com",
+                    "HomeLandlineNumber": "",
+                    "OfficeLandlineNumber": "TELEPHONE"
+                },
+                "ResidenceAddress": {},
+                "EmployerInfo": {
+                    "Profession": "Others",
+                    "NameofEmployer": "",
+                    "EmploymentType": "6",
+                    "EmploymentLocation": "ZZ",
+                    "EmployeeId": "",
+                    "Designation": "",
+                    "DateofJoining": ""
+                },
+                "PermanentAddress": {
+                    "Country": "UNITED ARAB EMIRATES",
+                    "AddressZip": "50066",
+                    "City": "DUBAI",
+                    "Fax": "",
+                    "AddressLine2": "ADDRESS2",
+                    "AddressLine1": "ADDRESS1",
+                    "State": "DUBAI",
+                    "MobileNumber": "",
+                    "PhoneNumber": "",
+                    "AddressLine3": "ADDRESS3",
+                    "EmailId": ""
+                },
+                "PersonalInfo": {
+                    "DateofBirth": "",
+                    "RMCode": "COM256177",
+                    "Gender": "",
+                    "Prefix": "",
+                    "ProfitCenterName": "COMMERCIAL",
+                    "NationalityCode": "AE",
+                    "ResidencyStatus": "33-BUSINESS & INDUSTRY-RES-PVTC SEC",
+                    "SignatoryDesignTxt4": "",
+                    "CountryofResidence": "",
+                    "SignatoryDesignTxt5": "",
+                    "RegistrationDate": "2005-07-25",
+                    "SignatoryDesignTxt1": "",
+                    "SignatoryDesignTxt2": "",
+                    "SignatoryDesignTxt3": "",
+                    "BenefitCategory": [],
+                    "MotherMaidenName": "",
+                    "CustomerCategory": "Both",
+                    "NoofDependents": "",
+                    "PromotionCode": "",
+                    "FullName": "FNAME110513456",
+                    "RMName": "Himanshu Patel 0549911404",
+                    "RMMobileNumber": "",
+                    "ProfitCenterCode": "102",
+                    "DirectorName1": "DIRECTOR_NAME",
+                    "DirectorName2": "DIRECTOR_NAME",
+                    "SignatoryName5": "",
+                    "DirectorName3": "DIRECTOR_NAME",
+                    "SignatoryName4": "",
+                    "SignatoryName3": "",
+                    "DirectorName4": "DIRECTOR_NAME",
+                    "SourcingAgent": "",
+                    "SignatoryName2": "",
+                    "DirectorName5": "DIRECTOR_NAME",
+                    "SignatoryName1": "",
+                    "MinorStatusFlag": "No",
+                    "CriteriaForPrivilege": "",
+                    "GroupName": "LIAB_NAME",
+                    "EducationalQualification": "",
+                    "NationalityDesc": "UNITED ARAB EMIRATES",
+                    "RegistrationNumber": "570698",
+                    "LanguagePreference": "ENG",
+                    "CustomerSignupDate": "",
+                    "CustomerId": "10513456",
+                    "CustomerIC": "SNAME110513456",
+                    "SourcingDepartment": "",
+                    "LiabilityId": "10054210",
+                    "ShortName": "NAME110513456",
+                    "BusinessType": "",
+                    "MaritalStatus": "",
+                    "CategoryCode": "D",
+                    "Category": "Corporate",
+                    "BankingType": "Both",
+                    "CustomerType": "C",
+                    "HomeBranch": "261",
+                    "StaffFlag": "N",
+                    "MemoFlag": "",
+                    "MemoDescription": "",
+                    "MemoSeverity": ""
+                },
+                "OfficeAddress": {
+                    "Country": "UNITED ARAB EMIRATES",
+                    "AddressZip": "50066",
+                    "City": "DUBAI",
+                    "Fax": "E_FAX",
+                    "AddressLine2": "ADDRESS2",
+                    "AddressLine1": "ADDRESS1",
+                    "State": "DUBAI",
+                    "MobileNumber": "E_TELEX",
+                    "PhoneNumber": "E_TELEPHONE",
+                    "AddressLine3": "ADDRESS3",
+                    "DepartmentName": "NULL",
+                    "CompanyName": ""
+                },
+                "KYCInfo": {
+                    "PassportNumber": "",
+                    "ExpiryDate": "",
+                    "LabourCardIssueDate": "",
+                    "VisaExpiryDate": "",
+                    "LabourCardNumber": "0",
+                    "VisaIssueDate": "",
+                    "UAENationalIdIssueDate": "",
+                    "UAENationalIdExpiryDate": "",
+                    "VisaNumber": "",
+                    "LabourCardExpiryDate": "",
+                    "IssueDate": "",
+                    "UAENationalId": "",
+                    "EconomicSector": "",
+                    "TradeLicenseNumber": "",
+                    "IdType": ""
+                }
+            }
+        }
+    }
+}
+
+POST https://devmaglan.adcbmis.local:8443/v1/accounts/inquiry - From accounts response select StatusCode, ProductCode then check against this values in and condition
+v_product_codes        TEXT[] := ARRAY[
+    '11','20','30','41','42','43','101','105','106','107','118','119','122','132','133','135','136',
+    '141','142','146','147','148','149','165','200','201','202','203','204','206','208','211','214',
+    '217','220','230','231','234','235','237','238','239','240','241','271','290','291','292','293',
+    '294','296','298','306','307','310','311','362','385','391','398','438','455','480','485','487',
+    '871','875','904','908','909','910','913','920','935'
+  ];
+  v_status_codes         TEXT[] := ARRAY['4','6','8','16','17','3'];
+
+for example - {product code - 20 , status code - 8 } in above array then ClPreventTrading is N or else Y
+
+Request
+{
+    "Data": {
+        "CustomerId": "10513456"
+    }
+}
+Response
+{
+    "Data": {
+        "Account": [
+            {
+                "AccountId": "10513456920002",
+                "Status": "ACCOUNT OPEN REGULAR",
+                "StatusCode": "8",
+                "Currency": "USD",
+                "AccountType": "Conventional",
+                "ProductCode": "542",
+                "Relationship": "SOW",
+                "AccountSubType": "Account",
+                "Description": "International Securities Brokerage A/C",
+                "OpeningDate": "2025-08-13",
+                "Account": [
+                    {
+                        "SchemeName": "IBAN",
+                        "Identification": "AE610030010513456920002",
+                        "Name": "Investment Account 1"
+                    }
+                ],
+                "Branch": [
+                    {
+                        "Identification": "006",
+                        "Name": "ADCB SECURITIES",
+                        "ShortName": "ADCB SECURITIES"
+                    }
+                ]
+            },
+            {
+                "AccountId": "10513456920003",
+                "Status": "ACCOUNT OPEN REGULAR",
+                "StatusCode": "8",
+                "Currency": "USD",
+                "AccountType": "Conventional",
+                "ProductCode": "542",
+                "Relationship": "SOW",
+                "AccountSubType": "Account",
+                "Description": "International Securities Brokerage A/C",
+                "OpeningDate": "2025-08-13",
+                "Account": [
+                    {
+                        "SchemeName": "IBAN",
+                        "Identification": "AE340030010513456920003",
+                        "Name": "Investment Account 1"
+                    }
+                ],
+                "Branch": [
+                    {
+                        "Identification": "006",
+                        "Name": "ADCB SECURITIES",
+                        "ShortName": "ADCB SECURITIES"
+                    }
+                ]
+            },
+            {
+                "AccountId": "10513456020001",
+                "Status": "ACCOUNT OPEN REGULAR",
+                "StatusCode": "8",
+                "Currency": "AED",
+                "AccountType": "Conventional",
+                "ProductCode": "20",
+                "Relationship": "SOW",
+                "AccountSubType": "Account",
+                "Description": "Current Account Commercial",
+                "OpeningDate": "2016-11-22",
+                "Account": [
+                    {
+                        "SchemeName": "IBAN",
+                        "Identification": "AE360030010513456020001",
+                        "Name": "10513456020001AC DESC"
+                    }
+                ],
+                "Branch": [
+                    {
+                        "Identification": "261",
+                        "Name": "KHALED BIN WALEED STREET",
+                        "ShortName": "KHALED BIN WALEED STREET"
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+Logic When "FetchCustomerDataFlag": "Y",
+
+with above condition, call below api and map values related to fatca and crs
+
+REquest
+
+{
+    "Data": {
+        "CustomerId": "10513456"
+    }
+}
+Respone
+{
+    "Data": {
+        "CustomerCRS": {
+            "CustomerId": "11261182",
+            "CustomerType": "I",
+            "CustomerDetails": {
+                "FirstName": "FNAMEUAT",
+                "LastName": "LNAMEUAT",
+                "CityOfBirth": "CITYOFBIRTH",
+                "ClassificationId": "3",
+                "ClassificationDate": "2018-10-01",
+                "CRSCertFormObtained": "Y"
+            },
+            "DocumentDetails": [
+                {
+                    "DocumentName": "",
+                    "CRSCertDocumentDate": "2018-09-18"
+                }
+            ],
+            "TaxResidenceCountryDetails": [
+                {
+                    "TaxResidenceCountry": "AE",
+                    "TaxpayerIdNumber": "NA",
+                    "ReasonId": "1",
+                    "ReportableFlag": ""
+                }
+            ],
+            "DueDiligenceInfo": []
+        },
+        "CustomerFATCA": {
+            "USPassportHolder": "NO",
+            "ClassificationDate": "2018-09-22",
+            "DocumentCollected": "NA",
+            "USIndiciaFound": "NO",
+            "Classification": "NON-US PERSON",
+            "CountryOfBirth": "INDIA"
+        }
+    }
+}
+
