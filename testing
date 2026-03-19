@@ -1,1 +1,98 @@
 
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:InqCustChannelProfileResMsg xmlns:ns0="http://www.test.com/esb/inq/CustomerProfileServices/InqCustChannelProfile.xsd">
+<ns1:header xmlns:ns1="http://www.test.com/esb/common/header.xsd">
+<ns1:usecaseID>1234</ns1:usecaseID>
+<ns1:serviceName>InqCustChannelProfile</ns1:serviceName>
+<ns1:versionNo>1.0</ns1:versionNo>
+<ns1:serviceAction>Inquiry</ns1:serviceAction>
+<ns1:correlationID>381115562</ns1:correlationID>
+<ns1:sysRefNumber>11240041</ns1:sysRefNumber>
+<ns1:senderID>BNCA</ns1:senderID>
+<ns1:consumer>FCUBS:InHouse:InHouse::</ns1:consumer>
+<ns1:reqTimeStamp>18/03/2026 09:54:12</ns1:reqTimeStamp>
+<ns1:repTimeStamp>18/03/2026 09:54:12</ns1:repTimeStamp>
+<ns1:username/>
+<ns1:credentials/>
+<ns1:returnCode>0</ns1:returnCode>
+<ns1:errorDescription>Success</ns1:errorDescription>
+<ns1:errorDetail>InqCustChannelProfile-0-SUCCESS</ns1:errorDetail>
+</ns1:header>
+<ns0:InqCustChannelProfileRes>
+<ns0:customerId>11303263</ns0:customerId>
+<ns0:custPrefix>Mr</ns0:custPrefix>
+<ns0:custFullName>SAYED MAQSOOD ADONI</ns0:custFullName>
+<ns0:custShortName>SAYED MAQSOOD ADONI</ns0:custShortName>
+<ns0:custCategory>Retail Individual</ns0:custCategory>
+<ns0:custIslamicFlag>Conventional</ns0:custIslamicFlag>
+<ns0:custMobile>971547246834</ns0:custMobile>
+<ns0:custEmail>dhtautotst106@gmail.com</ns0:custEmail>
+<ns0:custSignatureType>3</ns0:custSignatureType>
+<ns0:staffFlag>No</ns0:staffFlag>
+<ns0:memoFlag/>
+<ns0:custEIDANo>784199228381838</ns0:custEIDANo>
+<ns0:custEIDAStatusFlag>Valid</ns0:custEIDAStatusFlag>
+<ns0:residentStatus>40-INDIVIDUALS-RESIDENT</ns0:residentStatus>
+<ns0:minorFlag>No</ns0:minorFlag>
+<ns0:custPassportNo>P12345</ns0:custPassportNo>
+<ns0:custPassportIssueDt>01/01/1900</ns0:custPassportIssueDt>
+<ns0:custPassportExpiryDt>31/12/2049</ns0:custPassportExpiryDt>
+<ns0:custVisaNo>MDSA</ns0:custVisaNo>
+<ns0:custVisaIssueDt>10/11/2022</ns0:custVisaIssueDt>
+<ns0:custVisaExpiryDt>31/12/2050</ns0:custVisaExpiryDt>
+<ns0:nationalityCode>IN</ns0:nationalityCode>
+<ns0:nationalityDesc>INDIA</ns0:nationalityDesc>
+<ns0:dateOfBirth>30/09/1988</ns0:dateOfBirth>
+<ns0:profitCenterCode>104</ns0:profitCenterCode>
+<ns0:profitCenterName>ASPIRE</ns0:profitCenterName>
+<ns0:salaryAmount>15000</ns0:salaryAmount>
+<ns0:salaryDate>25/10/2021</ns0:salaryDate>
+<ns0:UDFDetails>
+<ns0:UDFs>
+<ns0:UDFLabel>CID Source Code</ns0:UDFLabel>
+<ns0:UDFValue>0000</ns0:UDFValue>
+</ns0:UDFs>
+<ns0:UDFs>
+<ns0:UDFLabel>Type</ns0:UDFLabel>
+<ns0:UDFValue>1</ns0:UDFValue>
+</ns0:UDFs>
+<ns0:UDFs>
+<ns0:UDFLabel>Eligibility Criteria Code</ns0:UDFLabel>
+<ns0:UDFValue>MYCHOICE</ns0:UDFValue>
+</ns0:UDFs>
+<ns0:UDFs>
+<ns0:UDFLabel>Client Risk Classification</ns0:UDFLabel>
+<ns0:UDFValue>5</ns0:UDFValue>
+</ns0:UDFs>
+<ns0:UDFs>
+<ns0:UDFLabel>Cust Sector - Individual</ns0:UDFLabel>
+<ns0:UDFValue>1111</ns0:UDFValue>
+</ns0:UDFs>
+<ns0:UDFs>
+<ns0:UDFLabel>Outsourced Staff</ns0:UDFLabel>
+<ns0:UDFValue>1</ns0:UDFValue>
+</ns0:UDFs>
+<ns0:UDFs>
+<ns0:UDFLabel>Credit Bureau Consent</ns0:UDFLabel>
+<ns0:UDFValue>1</ns0:UDFValue>
+</ns0:UDFs>
+<ns0:UDFs>
+<ns0:UDFLabel>ILOE</ns0:UDFLabel>
+<ns0:UDFValue>N</ns0:UDFValue>
+</ns0:UDFs>
+<ns0:UDFs>
+<ns0:UDFLabel>Is the Customer Tajer</ns0:UDFLabel>
+<ns0:UDFValue>N</ns0:UDFValue>
+</ns0:UDFs>
+<ns0:UDFs>
+<ns0:UDFLabel>Fraud FLAG</ns0:UDFLabel>
+<ns0:UDFValue>N</ns0:UDFValue>
+</ns0:UDFs>
+<ns0:UDFs>
+<ns0:UDFLabel>Last KYC Review Date</ns0:UDFLabel>
+<ns0:UDFValue>2019-02-13</ns0:UDFValue>
+</ns0:UDFs>
+</ns0:UDFDetails>
+<ns0:custCreationDate>13/02/2019</ns0:custCreationDate>
+</ns0:InqCustChannelProfileRes>
+</ns0:InqCustChannelProfileResMsg>
