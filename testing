@@ -1,1 +1,23 @@
 
+
+URL : Request : <?xml version="1.0"?>  <InqCustChannelProfileReqMsg xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">    <header xmlns="http://www.test.com/esb/common/header.xsd">
+
+<usecaseID>1234</usecaseID>
+
+<serviceName>InqCustChannelProfile</serviceName>
+
+<versionNo>1.0</versionNo>
+
+<serviceAction>Inquiry</serviceAction>
+
+<sysRefNumber>7331657</sysRefNumber>
+
+<senderID>BNCA</senderID>
+
+<reqTimeStamp>18/03/2026 12:46:15</reqTimeStamp>    </header>   
+
+<InqCustChannelProfileReq xmlns="http://www.test.com/esb/inq/CustomerProfileServices/InqCustChannelProfile.xsd">
+
+<customerId>11303263</customerId>    </
+
+InqCustChannelProfileReq>  </InqCustChannelProfileReqMsg>
